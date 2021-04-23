@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.PaymentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/payment_back_img2"
+        android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/name_company"
+        android:layout_width="match_parent"
+        android:background="@color/secondaryLightColor"
+        android:layout_height="@dimen/toolbar_height">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:src="@drawable/back_arrow"/>
+        <TextView
+            android:id="@+id/company_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_gravity="center"
+            android:text="Payment"/>
+    </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/heading_layout"
+            android:layout_below="@+id/name_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:layout_marginTop="@dimen/dim_50"
+            android:padding="12dp"
+            android:background="@drawable/bowling_background"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/creadit_or_debitcard"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/lato"/>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_below="@+id/heading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorBlack"/>
+
+        <LinearLayout
+            android:layout_below="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:background="@drawable/bowling_bottom_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bordered_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:minHeight="25dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:padding="6dp"
+                android:background="@drawable/rounded_box"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/flag_iceland"/>
+
+                <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
+                    android:id="@+id/card_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    android:background="@color/primaryLightColor"
+                    android:textColor="@color/colorWhite"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/card_number"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/rounded_box"
+                    android:hint="MM"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/month_et"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:layout_height="50dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/rounded_box"
+                    android:hint="YYYY"
+                    android:id="@+id/year_et"
+                    android:inputType="number"
+                    android:textColor="@color/colorWhite"
+                    android:padding="5dp"
+                    android:layout_weight="0.33"/>
+                <EditText
+                    android:layout_height="50dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/rounded_box"
+                    android:hint="CVV"
+                    android:id="@+id/cvv_et"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:padding="5dp"
+                    android:layout_weight="0.34"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_pay"
+                android:background="@drawable/sign_up_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:fontFamily="@font/lato"
+                android:layout_margin="@dimen/dim_25"
+                android:padding="@dimen/dim_3"
+                android:text="Pay Now"
+                android:textSize="@dimen/dim_20"
+                android:layout_marginBottom="@dimen/dim_5"
+                android:textColor="@color/secondaryTextColor" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cp_cardview"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/dim_150"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="16dp"
+            android:visibility="gone"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cp_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/secondaryTextColor"
+                android:gravity="center">
+                <ProgressBar
+                    android:id="@+id/cp_pbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_65"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:indeterminateTint="@color/primaryColor"
+                    android:layout_marginTop="@dimen/dim_25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cp_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="@dimen/dim_20"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/progressbar_text"
+                    android:textColor="@color/primaryDarkColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</layout>

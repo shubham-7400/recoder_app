@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Sound Recorder</string>
+    <string name="progressbar_text">Please wait...</string>
+    <string name="stripe_key">pk_test_51IHiDVLQfYWb02zsrEHy2XHWqI7uW6EvTN7EWQMMBXTgeQcm56qf6yfvYUMGFlfj9Gz7xyDrRbO2OPXvh2sLsvs000L6CTWMJq</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+    <string name="option_box1">Metric or Imperial Unit</string>
+    <string name="option_box2">Distance from Wicket</string>
+    <string name="option_box3">Bat Weight</string>
+    <string name="option_box4">Running Time Per Delivery</string>
+    <string name="option_box5">Wicket Type</string>
+    <string name="option_box6">Select Option 6</string>
+    <string name="option_box9">Select Option 9</string>
+    <string name="option_box10">Select Option 10</string>
+    <string name="state_type">State Type</string>
+    <string name="select_state">Select State</string>
+    <string name="don_t_have_an_account_n_please_signup">Don\'t have an Account? Click here.</string>
+    <string name="already_have_an_account_n_please_login">Already have an account? Click here to login.</string>
+    <string name="option_box7">Select Option 7</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_email">Enter email address</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="cancel">Cancel</string>
+    <string name="cricktet_status">Cricket Status</string>
+    <string name="coach_section">Coach Section :</string>
+    <string name="view_data_analysis">(View data analysis related with your club)</string>
+    <string name="view_club_statics">View Club Statistics</string>
+    <string name="club_statics">Club Statistics</string>
+    <string name="bowling_speed">Bowling Speed</string>
+    <string name="bat_swing_speed">Bat Swing Speed</string>
+    <string name="aerial_travel_distance">Aerial Travel Distance</string>
+    <string name="ball_exit_speed">Ball Exit Speed</string>
+    <string name="bowling_session_summary">Bowling Sessions Summary</string>
+    <!--    <string name="players_name">Player's <br/> name</string>-->
+    <string name="bowling_speed_peak">Bowling Speed <br /> -Peak(km/hr)</string>
+    <string name="straight">Straight</string>
+    <string name="batting_session_summary">Batting Sessions Summary</string>
+    <string name="bat_swing_speed_km">Bat Swing Speed <br />(km/hr)</string>
+    <string name="areial_travel_distance">Aerial Travel Distance Sessions Summary</string>
+    <string name="ball_exit_session_summry">Ball Exit Sessions Summary</string>
+    <string name="aerial_travel_distnace_meters">Aerial Travel <br />Distance(meters)</string>
+    <string name="bowling_speed_km_hr">Bowling Speed <br />(km/hr)</string>
+    <string name="creadit_or_debitcard">Credit or Debit Card</string>
+    <string name="card_number">Card number</string>
+    <string name="valid_date">Enter a valid date: MM/YY</string>
+
+
+
+    <string-array name="age_array">
+        <item>Under 11</item>
+        <item>Under 12</item>
+        <item>Under 13</item>
+        <item>Under 14</item>
+        <item>Under 15</item>
+        <item>Under 16</item>
+        <item>Under 17</item>
+        <item>Senior</item>
+    </string-array>
+
+    <string-array name="type_array">
+        <item>Straight</item>
+        <item>Off</item>
+        <item>Wide of off</item>
+        <item>Wide of leg</item>
+        <item>Leg</item>
+        <item>Full</item>
+        <item>Good</item>
+        <item>Short</item>
+
+    </string-array>
+
+    <string-array name="item_six_array">
+        <item>Forward Defence</item>
+        <item>Straight Drive</item>
+        <item>Cover Drive</item>
+        <item>On Drive</item>
+        <item>Backfoot Defence - Off</item>
+        <item>Backfoot Defence - Straight</item>
+        <item>Backfoot Defence -On</item>
+        <item>Backfoot Leg Glance</item>
+        <item>Cut Shot</item>
+        <item>Pull Shot</item>
+        <item>Hook</item>
+        <item>Leg Glance</item>
+        <item>Sweep</item>
+        <item>Reverse Sweep</item>
+        <item>Mid Wicket</item>
+
+    </string-array>
+
+
+</resources>

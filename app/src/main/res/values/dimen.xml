@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dim_1">1dp</dimen>
+    <dimen name="dim_2">2dp</dimen>
+    <dimen name="dim_3">3dp</dimen>
+    <dimen name="dim_4">4dp</dimen>
+    <dimen name="dim_5">5dp</dimen>
+    <dimen name="dim_10">10dp</dimen>
+    <dimen name="dim_15">15dp</dimen>
+    <dimen name="dim_20">20dp</dimen>
+    <dimen name="dim_25">25dp</dimen>
+    <dimen name="dim_30">30dp</dimen>
+    <dimen name="dim_35">35dp</dimen>
+    <dimen name="dim_38">38dp</dimen>
+    <dimen name="dim_40">40dp</dimen>
+    <dimen name="dim_45">45dp</dimen>
+    <dimen name="dim_50">50dp</dimen>
+    <dimen name="dim_55">55dp</dimen>
+    <dimen name="dim_60">60dp</dimen>
+    <dimen name="dim_65">65dp</dimen>
+    <dimen name="dim_70">70dp</dimen>
+    <dimen name="dim_75">75dp</dimen>
+    <dimen name="dim_80">80dp</dimen>
+    <dimen name="dim_85">85dp</dimen>
+    <dimen name="dim_90">90dp</dimen>
+    <dimen name="dim_95">95dp</dimen>
+    <dimen name="dim_100">100dp</dimen>
+    <dimen name="dim_105">105dp</dimen>
+    <dimen name="dim_110">110dp</dimen>
+    <dimen name="dim_115">115dp</dimen>
+    <dimen name="dim_120">120dp</dimen>
+    <dimen name="dim_125">125dp</dimen>
+    <dimen name="dim_130">130dp</dimen>
+    <dimen name="dim_135">135dp</dimen>
+    <dimen name="dim_140">140dp</dimen>
+    <dimen name="dim_145">145dp</dimen>
+    <dimen name="dim_150">150dp</dimen>
+    <dimen name="dim_155">155dp</dimen>
+    <dimen name="dim_160">160dp</dimen>
+    <dimen name="dim_165">165</dimen>
+    <dimen name="dim_170">170dp</dimen>
+    <dimen name="dim_175">175dp</dimen>
+    <dimen name="dim_180">180dp</dimen>
+    <dimen name="dim_185">185dp</dimen>
+    <dimen name="dim_190">190dp</dimen>
+    <dimen name="dim_195">195dp</dimen>
+    <dimen name="dim_200">200dp</dimen>
+    <dimen name="dim_205">205dp</dimen>
+    <dimen name="dim_210">210dp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+
+    <dimen name="title_size">25dp</dimen>
+    <dimen name="options_size">15dp</dimen>
+    <dimen name="all_link_size">15dp</dimen>
+    <dimen name="outputs_text_size">15dp</dimen>
+
+    <dimen name="summary_btn_width">90dp</dimen>
+    <dimen name="summary_btn_height">25dp</dimen>
+
+    <dimen name="toolbar_height">50dp</dimen>
+
+</resources>

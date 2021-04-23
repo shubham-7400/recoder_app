@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primaryColor">#1c2127</color> //dark
+   <!-- <color name="primaryLightColor">#43484f</color> //light dark-->
+    <color name="primaryLightColor">#2e383f</color> //light dark
+   <!-- <color name="primaryDarkColor">#000000</color> //very dark color-->
+     <color name="primaryDarkColor">#262c30</color> //very dark color
+
+    <color name="secondaryColor">#2d7c49</color> // green
+   <!-- <color name="secondaryLightColor">#5eac75</color> // light green-->
+    <color name="secondaryLightColor">#2eb050</color>
+    <color name="secondaryDarkColor">#004f20</color> very dark green
+
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="color_blue">#03B0FF</color>
+
+    <color name="color_red">#ba0000</color>
+
+    <color name="color_orange">#cda02b</color>
+
+    <color name="can_be_used_for_status_bar">#007f24</color>
+
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorBlack">#000000</color>
+
+</resources>

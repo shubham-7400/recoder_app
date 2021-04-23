@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryColor">
+        <LinearLayout
+            android:id="@+id/name_company"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/secondaryLightColor"
+            android:gravity="center_horizontal"
+            android:layout_height="100dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/back_arrow"
+                android:layout_marginEnd="50dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="30dp"
+                android:paddingRight="50dp"
+                android:layout_gravity="center_vertical"
+                android:text="Summary Output 3"
+                android:paddingEnd="50dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signup_text_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/name_company">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/primaryDarkColor"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Output 3"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/secondaryTextColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="Type"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/secondaryTextColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="#3A3333"
+                android:layout_height="1dp"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:background="@color/primaryDarkColor"
+                android:layout_marginBottom="40dp"
+                android:layout_height="250dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </FrameLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:background="@color/primaryDarkColor"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="20dp" />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:src="@drawable/dropdown"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/primaryDarkColor"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="72.11"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/color_orange"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="Concrete 100"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/secondaryLightColor"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.SignupTwoActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_image">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/name_company"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/dim_60">
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:src="@drawable/back_arrow"/>
+                <TextView
+                    android:id="@+id/company_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:layout_gravity="center"
+                    android:text="Company Name"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_5"
+                android:orientation="vertical"
+                android:background="@color/secondaryLightColor"
+                android:layout_below="@+id/name_company"/>
+            <LinearLayout
+                android:id="@+id/app_logo_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/dim_90"
+                    android:layout_height="@dimen/dim_90"
+                    android:paddingTop="@dimen/dim_10"
+                    android:src="@drawable/app_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signup_text_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dim_20"
+                android:layout_marginRight="@dimen/dim_20"
+                android:layout_marginTop="@dimen/dim_30"
+                android:layout_below="@+id/app_logo_name">
+
+                <EditText
+                    android:id="@+id/club_or_school_edt"
+                    android:textColor="@color/secondaryTextColor"
+                    android:autofilledHighlight="@drawable/text_field_backgound_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/primaryDarkColor"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:textColorHint="@color/secondaryTextColor"
+                    android:padding="@dimen/dim_2"
+                    android:paddingStart="@dimen/dim_10"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:textSize="@dimen/dim_20"
+                    android:gravity="center_vertical"
+                    android:hint="Club or School"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/gender_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/dim_15"
+                        android:background="@color/primaryDarkColor"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dim_2"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/options_size" />
+                    <TextView
+                        android:id="@+id/gender_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim_40"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/dim_20"
+                        android:fontFamily="@font/lato"
+                        android:layout_gravity="center"
+                        android:text="Select Gender"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_margin="@dimen/dim_15"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/age_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/dim_15"
+                        android:background="@color/primaryDarkColor"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dim_2"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/options_size" />
+                    <TextView
+                        android:id="@+id/age_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim_40"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/dim_20"
+                        android:fontFamily="@font/lato"
+                        android:layout_gravity="center"
+                        android:text="Select Age Group"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_margin="@dimen/dim_15"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/competition_edt"
+                    android:textColor="@color/secondaryTextColor"
+                    android:autofilledHighlight="@drawable/text_field_backgound_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/primaryDarkColor"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:textColorHint="@color/secondaryTextColor"
+                    android:padding="@dimen/dim_2"
+                    android:paddingStart="@dimen/dim_10"
+                    android:paddingLeft="@dimen/dim_10"
+                    android:textSize="@dimen/dim_20"
+                    android:gravity="center_vertical"
+                    android:hint="Competition"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/select_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/dim_15"
+                        android:background="@color/primaryDarkColor"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dim_2"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/options_size" />
+                    <TextView
+                        android:id="@+id/select_country_hint"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim_40"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/dim_20"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:fontFamily="@font/lato"
+                        android:layout_gravity="center"
+                        android:text="Select Country"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_margin="@dimen/dim_15"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/state_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/dim_15"
+                        android:background="@color/primaryDarkColor"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dim_2"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/options_size" />
+                    <TextView
+                        android:id="@+id/state_type_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim_40"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/dim_20"
+                        android:fontFamily="@font/lato"
+                        android:layout_gravity="center"
+                        android:text="Select Region"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_margin="@dimen/dim_15"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/state"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/dim_15"
+                        android:background="@color/primaryDarkColor"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dim_2"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/options_size" />
+                    <TextView
+                        android:id="@+id/state_name_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim_40"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingLeft="@dimen/dim_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/dim_20"
+                        android:fontFamily="@font/lato"
+                        android:layout_gravity="center"
+                        android:text="Name"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/dropdown"
+                        android:layout_margin="@dimen/dim_15"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/singup_btn_linear_layout"
+                android:layout_marginTop="@dimen/dim_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signup_text_fields"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_continue"
+                    android:background="@drawable/sign_up_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/lato"
+                    android:layout_marginLeft="@dimen/dim_20"
+                    android:layout_marginRight="@dimen/dim_20"
+                    android:padding="@dimen/dim_3"
+                    android:text="Continue"
+                    android:textSize="@dimen/dim_20"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:textColor="@color/secondaryTextColor" />
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cp_cardview"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/dim_150"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:cardBackgroundColor="#00000000"
+                app:cardCornerRadius="16dp"
+                android:visibility="gone"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cp_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/secondaryTextColor"
+                    android:gravity="center">
+                    <ProgressBar
+                        android:id="@+id/cp_pbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_65"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:indeterminateTint="@color/primaryColor"
+                        android:layout_marginTop="@dimen/dim_25"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cp_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textSize="@dimen/dim_20"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/progressbar_text"
+                        android:textColor="@color/primaryDarkColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>

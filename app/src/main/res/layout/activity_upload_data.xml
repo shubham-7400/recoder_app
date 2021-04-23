@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.UploadDataActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_image">
+        <FrameLayout
+            android:id="@+id/name_company"
+            android:layout_width="match_parent"
+            android:background="@color/secondaryLightColor"
+            android:layout_height="@dimen/toolbar_height">
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/back_arrow"/>
+            <TextView
+                android:id="@+id/company_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/title_size"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_summary_output1"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_below="@+id/name_company"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dim_15"
+            android:paddingBottom="@dimen/dim_15"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_10"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".33"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:text="Share with other users"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/outputs_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/searchview_linear_layout"
+            android:layout_below="@+id/linear_layout_summary_output1"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_10"
+            android:background="@color/primaryDarkColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:iconifiedByDefault="false"
+                android:searchIcon="@drawable/ic_search_icon"
+                android:theme="@style/SearchViewTheme"
+                android:queryHint="Search Here" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_below="@+id/searchview_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/dim_20"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/dim_10"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:id="@+id/horizontal_recyclerview_of_user_to_share_data"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_height="300dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/vertical_recyclerview_of_user_to_share_data"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_height="300dp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dim_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/upload_data_btn"
+                        android:background="@drawable/sign_up_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/lato"
+                        android:textAllCaps="false"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_10"
+                        android:text="Upload"
+                        android:textSize="@dimen/dim_20"
+                        android:layout_marginBottom="@dimen/dim_5"
+                        android:textColor="@color/secondaryTextColor" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cp_cardview"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/dim_150"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="16dp"
+            android:visibility="gone"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cp_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/secondaryTextColor"
+                android:gravity="center">
+                <ProgressBar
+                    android:id="@+id/cp_pbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_65"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:indeterminateTint="@color/primaryColor"
+                    android:layout_marginTop="@dimen/dim_25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cp_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="@dimen/dim_20"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/progressbar_text"
+                    android:textColor="@color/primaryDarkColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

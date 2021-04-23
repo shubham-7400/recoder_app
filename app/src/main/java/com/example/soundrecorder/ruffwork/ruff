@@ -1,0 +1,225 @@
+/*private fun playRecording() {
+        var audioData: ByteArray? = null
+        try {
+            val inputStream: InputStream = FileInputStream(filePath)
+            val minBufferSize = AudioTrack.getMinBufferSize(
+                44100,
+                AudioFormat.CHANNEL_OUT_MONO,
+                AudioFormat.ENCODING_PCM_16BIT
+            )
+            audioData = ByteArray(minBufferSize)
+            val audioTrack = AudioTrack(
+                AudioManager.STREAM_MUSIC,
+                RECORDER_SAMPLERATE,
+                AudioFormat.CHANNEL_OUT_MONO,
+                RECORDER_AUDIO_ENCODING,
+                minBufferSize,
+                AudioTrack.MODE_STREAM
+            )
+            audioTrack.play()
+            var i = 0
+            while (inputStream.read(audioData).also { i = it } != -1) {
+                audioTrack.write(audioData, 0, i)
+            }
+        } catch (fe: FileNotFoundException) {
+            Log.e(TAG, "File not found")
+        } catch (io: IOException) {
+            Log.e(TAG, "IO Exception")
+        }
+    }
+*/
+
+
+ /*private fun stopRecording() {
+        var totalDecibelSound1: Double = 0.0
+        var totalDecibelSound2: Double = 0.0
+        var sound1PeakDecibel: Double = 0.0
+        var sound1AverageDecible = 0.0
+        var sound2PeakDecibel: Double = 0.0
+        var sound2AverageDecibel = 0.0
+        var currentDb: Double = 0.0
+        var averageDecibelforsound1 = 0.0
+        var averageDecibelForSound2 = 0.0
+
+        var hashSetDisplayOutputs: HashMap<String, String> = getDisplayOutputsHashMap()
+
+        // stops the recording activity
+        if (null != recorder) {
+            isRecording = false
+            recorder!!.stop()
+            recorder!!.release()
+            recorder = null
+            recordingThread = null
+            *//*Log.i( TAG, "stopRecording: hieghest decibel is " +  highestDecibel + " corresponding to the frequency " +frequencyCorrespondingToHeightstDecibel)*//*
+            Log.i(TAG, "stopRecording: sound1 values are " + mapSound1.size)
+            Log.i(TAG, "stopRecording: sound2 values are " + mapSound2.size)
+            Log.i(TAG, "stopRecording: sound1 end time " + firstSoundEndTime)
+            Log.i(TAG, "stopRecording: sound2 start time " + secondSoundStartTime)
+
+            for (dbAsKey in mapSound1.keys)
+            {
+                Log.i(
+                    TAG,
+                    "stopRecording: frequency : " + mapSound1.get(dbAsKey) + " , db : " + dbAsKey
+                )
+                totalDecibelSound1 = totalDecibelSound1 + dbAsKey
+                if (currentDb < dbAsKey){
+                    sound1PeakDecibel = dbAsKey
+                    currentDb = sound1PeakDecibel
+                }
+            }
+
+
+            Log.i(TAG, "stopRecording: average "+sound1AverageDecible+" , db Level "+hashSetDisplayOutputs.get("dbLevel")!!.toDouble()+" , option1 "+option1+" , option 5 "+option5+" ,opttion2 "+option2+" ,option3 "+option3+" , factor1 "+hashSetDisplayOutputs.get(
+                "factor1"
+            )!!.toDouble()+ " , factor2 "+ hashSetDisplayOutputs.get("factor2")!!.toDouble())
+            if (mapSound1.size != 0)
+            {
+                sound1AverageDecible = (totalDecibelSound1 / (mapSound1.size))
+                output1 = sound1AverageDecible - (hashSetDisplayOutputs.get("dbLevel")!!.toDouble()) * option1 * option5 * (hashSetDisplayOutputs.get("factor1")!!.toDouble()) / (hashSetDisplayOutputs.get("factor2")!!.toDouble())
+                if ((secondSoundStartTime - firstSoundEndTime) > 0.5)
+                {
+                    sound2PeakDecibel = 0.0
+                    output2 = 0.00
+                    output3 = 0.00
+                }else{
+                    currentDb  = 0.0
+                    for (dbAsKey in mapSound2.keys)
+                    {
+                        Log.i(
+                            TAG,
+                            "stopRecording: frequency : " + mapSound2.get(dbAsKey) + " , db : " + dbAsKey
+                        )
+                        totalDecibelSound2 = totalDecibelSound2 + dbAsKey
+                        if (currentDb < dbAsKey){
+                            sound2PeakDecibel = dbAsKey
+                            currentDb = sound2PeakDecibel
+                        }
+                    }
+                    if (mapSound2.size != 0)
+                    {
+                        sound2AverageDecibel = (totalDecibelSound2 / (mapSound2.size))
+                        output2 = sound2AverageDecibel - (hashSetDisplayOutputs.get("dbLevel")!!.toDouble()) * option1 * option2 * option3 * (hashSetDisplayOutputs.get("factor1")!!.toDouble()) / (hashSetDisplayOutputs.get("factor2")!!.toDouble())
+                        if (binding.switchBtnYesAndNo.isChecked) {
+                            output3 = output2 * output1 * (hashSetDisplayOutputs.get("factor1")!!.toDouble()) / (hashSetDisplayOutputs.get("factor2")!!.toDouble())
+                        }else{
+                            output3 = 0.0
+                        }
+                    }else{
+                        output3 = 0.0
+                    }
+                    Log.i(TAG, "stopRecording: sound2AverageDecibel "+sound2AverageDecibel)
+                }
+                output4 = output1 * output2 * ((hashSetDisplayOutputs.get("factor1")!!.toDouble()) / (hashSetDisplayOutputs.get(
+                    "factor2"
+                )!!.toDouble()))
+            }else{
+                output1 = 0.0
+                output2 = 0.0
+                output3 = 0.0
+                output4 = 0.0
+            }
+
+            Log.i(TAG, "stopRecording: sound1 pci decibel " + sound1PeakDecibel)
+            Log.i(TAG, "stopRecording: sound2 pick decibel " + sound2PeakDecibel)
+            averageDecibelforsound1 = (totalDecibelSound1 / mapSound1.size)
+            averageDecibelForSound2 = (totalDecibelSound2 / mapSound2.size)
+            Log.i(TAG, "stopRecording: sound1 average db is " + averageDecibelforsound1)
+            Log.i(TAG, "stopRecording: sound2 average db is " + averageDecibelForSound2)
+           *//* playRecording()*//*
+        }
+
+
+        if (output1 != 0.0  )
+        {
+            setOutput(dec.format(output1), dec.format(output2), dec.format(output3),dec.format(output4))
+
+            if (arrayListToHoldOptionBox6Obj == null){
+                arrayListToHoldOptionBox6Obj = ArrayList<OptionBox6DataClass>()
+            }
+            if (arrayListToHoldOptionBox6Obj != null){
+                var hashSetToHoldOptionBox6ObjString = pSharedPref?.getString(
+                    "hashSetToHoldOptionBox6Obj",
+                    "hashSetToHoldOptionBox6ObjNotExist"
+                )
+                var gson = Gson()
+                var type: Type? = object : TypeToken<HashSet<OptionBox6DataClass>>() {}.getType()
+                var hashSetToHoldOptionBox6Obj: HashSet<OptionBox6DataClass> = gson.fromJson(
+                    hashSetToHoldOptionBox6ObjString,
+                    type
+                )
+                arrayListToHoldOptionBox6Obj = ArrayList<OptionBox6DataClass>(hashSetToHoldOptionBox6Obj)
+            }
+            if (binding.option6.selectedItem != null){
+                for (option in arrayListToHoldOptionBox6Obj!!.iterator())
+                {
+                    if (binding.option6.selectedItem.toString().contains(option.title)){
+                        var SumarryOutput1DataClassObj = SumarryOutput1DataClass(
+                            dec.format(output1).toString(),
+                            option.factor1.toString(),
+                            option.factor2.toString()
+                        )
+                        outputs1?.add(SumarryOutput1DataClassObj)
+                    }
+                }
+            }else{
+                var SumarryOutput1DataClassObj = SumarryOutput1DataClass(
+                    dec.format(output1).toString(),
+                    "-",
+                    "-"
+                )
+                outputs1?.add(SumarryOutput1DataClassObj)
+            }
+
+            if (binding.option6.selectedItem != null){
+                for (option in arrayListToHoldOptionBox6Obj!!.iterator())
+                {
+                    if (binding.option6.selectedItem.toString().contains(option.title)){
+                        var SumarryOutput2DataClassObj = SumarryOutput2DataClass(
+                            dec.format(output2).toString(), option.title, dec.format(
+                                output4
+                            ).toString()
+                        )
+                        outputs2?.add(SumarryOutput2DataClassObj)
+                    }
+                }
+            }else{
+                var SumarryOutput2DataClassObj = SumarryOutput2DataClass(
+                    dec.format(output2).toString(), "-", dec.format(
+                        output4
+                    ).toString()
+                )
+                outputs2?.add(SumarryOutput2DataClassObj)
+            }
+
+            if (binding.option6.selectedItem != null){
+                for (option in arrayListToHoldOptionBox6Obj!!.iterator())
+                {
+                    if (binding.option6.selectedItem.toString().contains(option.title)){
+                        var SumarryOutput3DataClassObj = SumarryOutput3DataClass(
+                            dec.format(output3).toString(), option.title
+                        )
+                        outputs3?.add(SumarryOutput3DataClassObj)
+                    }
+                }
+            }else{
+                var SumarryOutput3DataClassObj = SumarryOutput3DataClass(
+                    dec.format(output3).toString(),
+                    "-"
+                )
+                outputs3?.add(SumarryOutput3DataClassObj)
+            }
+
+            setOutputsResultToSharedPref()
+        }else{
+            mapSound1 = HashMap<Double, Double>()
+            mapSound2 = HashMap<Double, Double>()
+            firstSoundEndTime = 0.0
+            secondSoundStartTime = 0.0
+            i = 0
+            j = 0
+            milliseconds = (option4 * 1000).toLong();
+            doNotGoInFirst = false
+            doNotGoInSecond = true
+        }
+    }*/

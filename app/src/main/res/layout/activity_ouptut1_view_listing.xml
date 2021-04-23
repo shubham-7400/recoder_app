@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.Output1ViewListingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_image">
+        <FrameLayout
+            android:id="@+id/name_company"
+            android:layout_width="match_parent"
+            android:background="@color/secondaryLightColor"
+            android:layout_height="@dimen/toolbar_height">
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dim_10"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/back_arrow"/>
+
+            <TextView
+                android:id="@+id/company_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/title_size"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_gravity="center"
+                android:text="View Listing"/>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_summary_output1"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_below="@+id/name_company"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dim_15"
+            android:paddingBottom="@dimen/dim_15"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_10"
+            android:background="@drawable/radius_top_background"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/selected_factor_type"
+                android:text="Factor 1"
+                android:textSize="@dimen/dim_20"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/secondaryTextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signup_text_fields"
+            android:layout_below="@+id/linear_layout_summary_output1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_10"
+            android:layout_marginTop="40dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dim_15"
+                android:paddingBottom="@dimen/dim_15"
+                android:background="@drawable/radius_top_background"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Date"
+                    android:textSize="@dimen/outputs_text_size"
+                    android:gravity="center"
+                    android:layout_weight=".33"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/secondaryTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="Output1"
+                    android:textSize="@dimen/outputs_text_size"
+                    android:layout_weight=".33"
+                    android:gravity="center"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/secondaryTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/selected_factor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".34"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center"
+                    android:text="Factor"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="@dimen/outputs_text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="#3A3333"
+                android:layout_height="1dp"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:background="@color/primaryDarkColor"
+                android:layout_marginBottom="40dp"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/clear_button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stop_button"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                </FrameLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cp_cardview"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/dim_150"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="16dp"
+            android:visibility="gone"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cp_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/secondaryTextColor"
+                android:gravity="center">
+                <ProgressBar
+                    android:id="@+id/cp_pbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_65"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:indeterminateTint="@color/primaryColor"
+                    android:layout_marginTop="@dimen/dim_25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cp_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="@dimen/dim_20"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/progressbar_text"
+                    android:textColor="@color/primaryDarkColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

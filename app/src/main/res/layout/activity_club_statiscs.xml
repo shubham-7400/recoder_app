@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.ClubStatiscsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_image"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/name_company"
+            android:layout_width="match_parent"
+            android:background="@color/secondaryLightColor"
+            android:layout_height="@dimen/toolbar_height">
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:src="@drawable/back_arrow"/>
+            <TextView
+                android:id="@+id/company_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_gravity="center"
+                android:text="@string/club_statics"/>
+        </FrameLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/bowling_speed_layout"
+            android:layout_marginTop="@dimen/dim_60"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_70"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:background="@drawable/home_option_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dim_20"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/bowling_speed" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_margin="@dimen/dim_20"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bat_swing_layout"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_70"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:background="@drawable/home_option_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dim_20"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/bat_swing_speed" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_margin="@dimen/dim_20"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/aerial_travel_layout"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_70"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:background="@drawable/home_option_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dim_20"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/aerial_travel_distance"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_margin="@dimen/dim_20"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ball_exit_layout"
+            android:layout_marginLeft="@dimen/dim_20"
+            android:layout_marginRight="@dimen/dim_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_70"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:background="@drawable/home_option_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dim_20"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/ball_exit_speed" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/right_arrow"
+                android:layout_margin="@dimen/dim_20"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</layout>
